@@ -26,7 +26,7 @@ Then move the downloaded package.yml (or alternatively, just copy it's content f
 ```bash
 make
 sudo eopkg install *.eopkg
-(optional, to remove the installation file:) rm ./*.eopkg
+(optional, to remove the installation file:) rm *.eopkg
 ```
 
 ## Packages List
