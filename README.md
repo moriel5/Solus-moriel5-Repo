@@ -31,6 +31,6 @@ sudo eopkg install *.eopkg
 
 ## Packages List
 
-| Package Name | Version | Last Updated | How-to |
+| Package Name | Version | Last Updated | Notes |
 |-|-|-|-|
-| gnome-sound-recorder | 40.0 | 5/8/2022 |  |
+| gnome-sound-recorder | 40.0 | 5/8/2022 | Renamed to `gnome-sound-recorder-fix` since this is a dropped package |
