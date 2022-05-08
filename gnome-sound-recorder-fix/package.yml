@@ -1,0 +1,26 @@
+name       : gnome-sound-recorder-fix
+version    : 40.0
+release    : 2
+source     :
+    - https://download.gnome.org/sources/gnome-sound-recorder/40/gnome-sound-recorder-40.0.tar.xz : d4aa4c104d7465dd15807bf1703e65ff682eff52841c59cf3a07f5eff42e6501
+license    : GPL-2.0-only
+component  : multimedia.audio
+summary    : Sound recorder from GNOME
+description: |
+    Sound recorder from GNOME
+builddeps  :
+    - pkgconfig(gjs-1.0)
+    - pkgconfig(gstreamer-plugins-bad-1.0)
+    - pkgconfig(gstreamer-plugins-base-1.0)
+    - pkgconfig(gtk+-3.0)
+    - pkgconfig(libhandy-1)
+    - gstreamer-1.0-plugins-good
+rundeps    :
+    - gjs
+    - gstreamer-1.0-plugins-good
+setup      : |
+    %meson_configure
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
