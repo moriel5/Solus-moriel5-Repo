@@ -35,4 +35,4 @@ sudo eopkg install *.eopkg
 |-|-|-|-|
 | gnome-sound-recorder | 40.0 | 5/8/2022 | Renamed to `gnome-sound-recorder-fix` since this is a dropped package |
 | skypeforlinux | 8.83.0.408 | 5/9/2022 | Duplicate dependencies, not influental, however I would like feedback on how to clean this|
- | skypeforlinux-preview | 8.84.76.301 | 5/9/2022 | Duplicate dependencies, not influental, however I would like feedback on how to clean this|
+| skypeforlinux-preview | 8.84.76.301 | 5/9/2022 | Duplicate dependencies, not influental, however I would like feedback on how to clean this|
