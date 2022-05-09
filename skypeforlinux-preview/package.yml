@@ -1,0 +1,71 @@
+name       : skypeforlinux-preview
+version    : 8.84.76.301
+release    : 3
+source     :
+    - https://repo.skype.com/deb/pool/main/s/skypeforlinux/skypeforlinux_8.84.76.301_amd64.deb : ea216473b6e59eff98185da3b82860d87b6e5afaf181e296299c197347797ac5
+homepage   : https://www.skype.com/
+license    : Copyright (c) 2019 Skype and/or Microsoft
+strip      : no
+component  : network.im
+summary    : Skype
+description: |
+    Skype keeps you together. Call, message and share with others.
+builddeps  :
+    - libnss
+    - libatk
+    - glibc
+    - libcairo
+    - pycups
+    - libgcc
+    - libgtk-3
+    - libnspr
+    - libsecret
+    - libx11
+    - libxcb
+    - libxcomposite
+    - libxcursor
+    - libxdamage
+    - libxext
+    - libxfixes
+    - libxi
+    - libxrandr
+    - libxrender
+    - libxrandr
+    - libxrender
+    - libstdc++
+    - libdbusmenu
+    - gnome-keyring
+    - libxtst
+rundeps    :
+    - libnss
+    - libatk
+    - glibc
+    - libcairo
+    - pycups
+    - libgcc
+    - libgtk-3
+    - libnspr
+    - libsecret
+    - libx11
+    - libxcb
+    - libxcomposite
+    - libxcursor
+    - libxdamage
+    - libxext
+    - libxfixes
+    - libxi
+    - libxrandr
+    - libxrender
+    - libxrandr
+    - libxrender
+    - libstdc++
+    - libdbusmenu
+    - gnome-keyring
+    - libxtst
+setup      : |
+    ar xf $sources/skypeforlinux_${version}_amd64.deb
+    tar xfz data.tar.gz
+    rm -rf opt
+install    : |
+    mkdir -p $installdir/usr/
+    cp -R usr/{bin,share} $installdir/usr/
