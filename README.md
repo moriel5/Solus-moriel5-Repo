@@ -16,13 +16,13 @@ If something here gets accepted into the official *Solus* repository, it will ev
 You will need to set up an enviroment for packaging software for Solus (please use it to help the main repository).
 Instructions can be found over at the Solus Help Center, under *Package Management*: https://getsol.us/help-center/home/
 
-In your preferred location, follow the following steps (replace "<package-name>" with the name of the software):
+In your preferred location, follow the following steps (replace "package-name" with the name of the software):
 ```bash
-mkdir <package-name>
-cd <package-name>
+mkdir "package-name"
+cd "package-name"
 echo "include ../Makefile.common" > Makefile
 ```
-Then move the downloaded package.yml (or alternatively, just copy it's content from the repository into a new text file named "package.yml") over to <package-name> and finally:
+Then move the downloaded package.yml (or alternatively, just copy it's content from the repository into a new text file named "package.yml") over to "package-name" and finally:
 ```bash
 make
 sudo eopkg install *.eopkg
