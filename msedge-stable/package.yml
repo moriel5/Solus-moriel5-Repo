@@ -1,0 +1,50 @@
+name       : microsoft-edge-stable
+version    : 104.0.1293.47
+release    : 1
+source     :
+    - https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_104.0.1293.47-1_amd64.deb : 961beecf0cf516ab2bb73c37ca28300fb1cfbbec0614b557d86e3f6e1fb4a672
+license    : EULA
+component  : network.web.browser
+summary    : The web browser from Microsoft
+strip      : no
+extract    : no
+builddeps  :
+    - pkgconfig(atk)
+    - pkgconfig(alsa)
+    - pkgconfig(gbm)
+    - pkgconfig(gtk+-2.0)
+    - pkgconfig(gtk+-3.0)
+    - pkgconfig(libsecret-1)
+    - pkgconfig(x11)
+    - pkgconfig(xcursor)
+    - pkgconfig(xcomposite)
+    - pkgconfig(xdamage)
+    - pkgconfig(xi)
+    - pkgconfig(xrandr)
+    - pkgconfig(xtst)
+    - pkgconfig(xscrnsaver)
+description: |
+    A browser that combines a minimal design with sophisticated technology to make the web faster, safer, and easier.
+setup      : |
+    ar xf $sources/microsoft-edge-stable_${version}-1_amd64.deb
+    mkdir root
+    tar xf data.tar.xz -C root
+install    : |
+    # This only excludes /usr/bin link which will be invalid
+    install -D -d -m 00755 $installdir/usr/bin
+    install -D -d -m 00644 $installdir/usr/share
+    install -D -d -m 00644 $installdir/usr/share/microsoft/msedge-stable
+    cp -R root/usr/share/{applications,doc} $installdir/usr/share/
+
+    # We do not use /opt for binary packages in Solus, so just use /usr/share.
+    cp -R root/opt/microsoft/msedge/* $installdir/usr/share/microsoft/msedge-stable/
+    rm -rf $installdir/usr/share/microsoft/msedge-stable/cron
+    rm $installdir/usr/share/microsoft/msedge-stable/microsoft-edge
+
+    # Restore bin link
+     ln -sv /usr/share/microsoft/msedge-stable/msedge $installdir/usr/bin/microsoft-edge-stable
+
+    for icon_size in 16 24 32 48 64 128 256; do
+        install -D -m 00644 root/opt/microsoft/msedge/product_logo_${icon_size}.png $installdir/usr/share/icons/hicolor/${icon_size}x${icon_size}/apps/microsoft-edge.png
+    done
+
