@@ -1,8 +1,8 @@
-name       : skypeforlinux-preview
-version    : 8.84.76.301
-release    : 3
+name       : skype-preview
+version    : 8.87.76.403
+release    : 4
 source     :
-    - https://repo.skype.com/deb/pool/main/s/skypeforlinux/skypeforlinux_8.84.76.301_amd64.deb : ea216473b6e59eff98185da3b82860d87b6e5afaf181e296299c197347797ac5
+    - https://repo.skype.com/deb/pool/main/s/skypeforlinux/skypeforlinux_8.87.76.403_amd64.deb : 9dec507d33e17a50d3f1ce7209cdb9d8b9a22b30bc435c04f786de5676343a0b
 homepage   : https://www.skype.com/
 license    : Copyright (c) 2019 Skype and/or Microsoft
 strip      : no
