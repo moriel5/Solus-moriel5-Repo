@@ -1,8 +1,8 @@
-name       : skypeforlinux
-version    : 8.83.0.408
-release    : 15
+name       : skype
+version    : 8.86.0.407
+release    : 16
 source     :
-    - https://repo.skype.com/deb/pool/main/s/skypeforlinux/skypeforlinux_8.83.0.408_amd64.deb : 7df16a1ab980904c9acd6403d6e0067f50ec4dd0cbe2564ffcb49e86c2145ab5
+    - https://repo.skype.com/deb/pool/main/s/skypeforlinux/skypeforlinux_8.86.0.407_amd64.deb : e3a3342583f9401093091a8bb4dcab42c11ce8fb0ae9646cb1be792241baa6ed
 homepage   : https://www.skype.com/
 license    : Copyright (c) 2019 Skype and/or Microsoft
 strip      : no
